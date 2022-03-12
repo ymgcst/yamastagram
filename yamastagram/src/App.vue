@@ -12,15 +12,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'App',
-
-  data () {
-    return {
-      //
-    }
-  },
-})
+import { Vue } from 'vue-class-component';
+export default class App extends Vue {}
 </script>
