@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/pingu.jpg">
+    <img class="homeImage" alt="pingu" src="../assets/pingu.jpg">
     <HelloWorld msg="こんにちは"/>
   </div>
 </template>
@@ -16,3 +16,12 @@ import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 })
 export default class HomeView extends Vue {}
 </script>
+
+<style scoped>
+.homeImage {
+  /*border-radius: 20px;*/
+  width: 100%;
+  max-width: 400px;
+  margin: 0px, 10%px;
+}
+</style>
