@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Yamastagram from '../views/Yamastagram.vue'
+import Expenses from '../views/Expenses.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,7 +21,13 @@ const routes: Array<RouteRecordRaw> = [
     path: '/yamastagram',
     name: 'yamastagram',
     component: Yamastagram
+  },
+  {
+    path: '/expenses',
+    name: 'expenses',
+    component: Expenses
   }
+
 ]
 
 const router = createRouter({

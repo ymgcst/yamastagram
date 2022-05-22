@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <h1>Yamastagramでうｓ</h1>
+  <div>
+    <h1>Yamastagram</h1>
   </div>
 </template>
 

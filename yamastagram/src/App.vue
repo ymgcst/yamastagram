@@ -4,7 +4,8 @@
       <nav>
         <router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link> |
-        <router-link to="/yamastagram">Yamastagram</router-link>
+        <router-link to="/yamastagram">Yamastagram</router-link> |
+        <router-link to="/expenses">Expenses</router-link>
       </nav>
       <router-view/>
     </v-main>
