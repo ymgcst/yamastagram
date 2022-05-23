@@ -24,11 +24,18 @@
       <h3 v-for="bill in bills" :key="bill">{{bill.bill}}</h3>
     </div>
 
+    <v-btn class="addButton" icon large @click.stop="showAddBillPage=true">
+      <v-icon>mdi-plus</v-icon>
+    </v-btn>
+
+    <add-bill v-bind:show="showAddBillPage"></add-bill>
+
   </v-container>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
+//import AddBill from '@/components/AddBill.vue'
 
 type Bill = {
     bill: string;
@@ -41,6 +48,8 @@ type Bill = {
 export default class Expenses extends Vue {
   // お勘定
   private bills: Bill[] = [];
+
+  private showAddBillPage = false;
 
   public created() {
     this.getBills();
@@ -80,5 +89,13 @@ export default class Expenses extends Vue {
     margin: 0 0 10px;
     font-size: 15px;
   }
+}
+
+.addButton {
+  background-color: olivedrab;
+  color: white;
+  position:fixed;
+  right:50px;
+  bottom:50px;
 }
 </style>
