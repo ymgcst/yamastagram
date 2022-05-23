@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Yamastagram from '../views/Yamastagram.vue'
 import Expenses from '../views/Expenses.vue'
@@ -27,11 +27,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'expenses',
     component: Expenses
   }
-
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  // TODO バックエンド実装時にヒストリーモードに戻す
+  //history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes
 })
 
